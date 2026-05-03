@@ -108,18 +108,17 @@ st.markdown(
 # ---------------- Load Model ----------------
 @st.cache_resource
 def load_model():
-    tokenizer = DistilBertTokenizerFast.from_pretrained("../model/saved_model")
+    MODEL_NAME = "nitesh-kumar864/FAKE-NEWS-DETECTOR"
+
+    tokenizer = DistilBertTokenizerFast.from_pretrained(MODEL_NAME)
     model = DistilBertForSequenceClassification.from_pretrained(
-        "../model/saved_model",
-        torch_dtype=torch.float32,
-        low_cpu_mem_usage=True
+        MODEL_NAME,
+        torch_dtype=torch.float32
     )
+
     model.to("cpu")
     model.eval()
     return tokenizer, model
-
-
-tokenizer, model = load_model()
 
 tokenizer, model = load_model()
 
