@@ -1,0 +1,30 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Environment files
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Large ML model files (IMPORTANT)
+model/saved_model/*.bin
+model/saved_model/*.pt
+model/saved_model/*.safetensors
+
+# Optional: ignore dataset (if large)
+data/*.csv
+raw_data/*.csv
+
+# VS Code
+.vscode/
