@@ -1,6 +1,7 @@
 
 import streamlit as st
 import torch
+from datetime import datetime
 from transformers import DistilBertTokenizerFast, DistilBertForSequenceClassification
 
 # ---------------- Page Config --------------
@@ -253,7 +254,9 @@ if detect:
         </div>
         """, unsafe_allow_html=True)
 # ---------------- Footer ----------------
+year = datetime.now().year
+
 st.markdown(
-    "<div class='footer'>© 2025 Veritas AI · Fake News Detection System</div>",
+    f"<div class='footer'>© {year}  · Fake News Detection System</div>",
     unsafe_allow_html=True
 )
